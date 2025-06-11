@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head><title>Messages</title></head>
+<body>
+    <h1>Messages Received</h1>
+    {% for msg in messages %}
+        <p><strong>{{ msg.name }}</strong>: {{ msg.message }}</p>
+    {% else %}
+        <p>No messages yet.</p>
+    {% endfor %}
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
